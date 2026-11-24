@@ -1,0 +1,282 @@
+
+.story-details-page {
+  min-height: 100vh;
+  padding: 75px 7%;
+  background: var(--bg, #fff8fc);
+  color: var(--text, #30243d);
+}
+
+.story-details-heading {
+  max-width: 720px;
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.story-details-tag {
+  display: inline-block;
+  padding: 9px 20px;
+  border-radius: 30px;
+  background: #ffe4f1;
+  color: #d94c91;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.story-details-heading h1 {
+  margin: 18px 0 10px;
+  font-family: "Baloo 2", cursive;
+  font-size: clamp(36px, 5vw, 55px);
+  line-height: 1.15;
+}
+
+.story-details-heading p {
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+.story-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.story-details-card {
+  padding: 24px;
+  border: 1px solid rgba(120, 80, 140, 0.08);
+  border-radius: 26px;
+  background: white;
+  box-shadow: 0 12px 35px rgba(75, 45, 90, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-details-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(75, 45, 90, 0.13);
+}
+
+.story-details-card.pink { background: #fff0f6; }
+.story-details-card.green { background: #eaf9e9; }
+.story-details-card.blue { background: #edf0ff; }
+.story-details-card.purple { background: #f5eaff; }
+.story-details-card.orange { background: #fff2df; }
+.story-details-card.sky { background: #e9f7ff; }
+
+.story-details-art {
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.55);
+  font-size: 78px;
+}
+
+.story-details-category {
+  color: #9851c5;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.story-details-card h2 {
+  margin: 10px 0;
+  font-family: "Baloo 2", cursive;
+  font-size: 25px;
+}
+
+.story-details-card p {
+  min-height: 72px;
+  font-size: 14px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+.story-details-age {
+  display: inline-block;
+  margin: 8px 0 18px;
+  padding: 7px 13px;
+  border-radius: 20px;
+  background: #f0eaff;
+  color: #7850b5;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.story-details-button {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(100deg, #ff70a8, #a879ed);
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.story-details-button:hover {
+  transform: scale(1.03);
+}
+
+.story-details-back {
+  margin-top: 45px;
+  text-align: center;
+}
+
+.story-details-back a {
+  color: #a34ed1;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.dark .story-details-card {
+  background: #282238;
+  border-color: #403650;
+}
+
+.dark .story-details-art {
+  background: #383047;
+}
+
+@media (max-width: 900px) {
+  .story-details-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .story-details-page {
+    padding: 50px 5%;
+  }
+
+  .story-details-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .story-details-card {
+    padding: 18px;
+  }
+}
+
+/* IMPROVED DARK MODE */
+
+.dark .story-details-page {
+  background: #211b30;
+  color: #ffffff;
+}
+
+.dark .story-details-heading h1,
+.dark .story-details-card h2 {
+  color: #ffffff;
+}
+
+.dark .story-details-heading p,
+.dark .story-details-card p {
+  color: #e0d5eb;
+}
+
+.dark .story-details-tag {
+  background: #453452;
+  color: #ffd0ed;
+}
+
+.dark .story-details-card {
+  background: #30263e;
+  border-color: #514363;
+}
+
+.dark .story-details-card.pink,
+.dark .story-details-card.green,
+.dark .story-details-card.blue,
+.dark .story-details-card.purple,
+.dark .story-details-card.orange,
+.dark .story-details-card.sky {
+  background: #30263e;
+}
+
+.dark .story-details-art {
+  background: #40334f;
+}
+
+.dark .story-details-category {
+  color: #f0a5dc;
+}
+
+.dark .story-details-age {
+  background: #453452;
+  color: #ffd0ed;
+}
+
+.dark .story-details-back a {
+  color: #f0a5dc;
+}
+
+
+/* Favourite Button */
+
+.story-details-card {
+  position: relative;
+}
+
+.story-favorite-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: #fff;
+  color: #d17aa8;
+  font-size: 27px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(70, 40, 80, 0.12);
+  transition: 0.25s ease;
+}
+
+.story-favorite-btn:hover {
+  transform: scale(1.12);
+}
+
+.story-favorite-btn.active {
+  background: #ffe3ef;
+  color: #e34e86;
+}
+
+/* Favourite Page Link */
+
+.view-favorites-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 11px 23px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #e58dc4, #a78bdf);
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.view-favorites-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(90, 50, 100, 0.15);
+}
+
+.dark .story-favorite-btn {
+  background: #453452;
+  color: #f5c4e7;
+}
+
+.dark .story-favorite-btn.active {
+  background: #70405f;
+  color: #ffb5d2;
+}

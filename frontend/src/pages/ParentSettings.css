@@ -1,0 +1,198 @@
+
+.parent-settings-page {
+  min-height: 100vh;
+  padding: 55px 7%;
+  background: var(--bg, #fff8fc);
+  color: var(--text, #30243d);
+}
+
+.settings-header {
+  margin-bottom: 35px;
+}
+
+.settings-header > span {
+  color: #a35bc1;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.settings-header h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 12px 0;
+}
+
+.settings-header p {
+  color: #887b91;
+}
+
+.settings-card {
+  max-width: 750px;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 22px;
+  background: white;
+  box-shadow: 0 6px 25px rgba(80, 50, 100, 0.08);
+}
+
+.settings-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-bottom: 28px;
+}
+
+.settings-avatar {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f7e5ff;
+  font-size: 30px;
+}
+
+.settings-card-heading h2 {
+  margin: 0 0 6px;
+}
+
+.settings-card-heading p {
+  color: #887b91;
+  margin: 0;
+}
+
+.settings-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 22px;
+}
+
+.settings-field label {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.settings-field input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e6dbea;
+  border-radius: 12px;
+  outline: none;
+  background: #fffaff;
+  color: #30243d;
+  font-size: 15px;
+}
+
+.settings-field input:focus {
+  border-color: #a35bc1;
+  box-shadow: 0 0 0 3px rgba(163, 91, 193, 0.1);
+}
+
+.settings-field input:disabled {
+  background: #f7f3f8;
+  color: #766b7d;
+  cursor: not-allowed;
+}
+
+.settings-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.settings-buttons button,
+.settings-back-btn {
+  padding: 13px 23px;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.settings-edit-btn,
+.settings-save-btn {
+  background: linear-gradient(135deg, #a35bc1, #ed82b6);
+  color: white;
+}
+
+.settings-cancel-btn {
+  background: #f0eaf3;
+  color: #574563;
+}
+
+.settings-buttons button:hover,
+.settings-back-btn:hover {
+  transform: translateY(-2px);
+}
+
+.settings-message {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #eaf8ee;
+  color: #28783e;
+  font-size: 14px;
+}
+
+.settings-help-card h2 {
+  margin-top: 0;
+}
+
+.settings-help-card p {
+  color: #887b91;
+  line-height: 1.7;
+}
+
+.settings-back-btn {
+  margin-top: 10px;
+  background: #f0e5f7;
+  color: #8547a4;
+}
+
+.dark .parent-settings-page {
+  background: #211a2c;
+  color: #fff;
+}
+
+.dark .settings-card {
+  background: #33283f;
+}
+
+.dark .settings-field input {
+  background: #40334f;
+  border-color: #574565;
+  color: #fff;
+}
+
+.dark .settings-field input:disabled {
+  background: #493b57;
+}
+
+.dark .settings-card-heading p,
+.dark .settings-header p,
+.dark .settings-help-card p {
+  color: #c4b5d0;
+}
+
+.dark .settings-cancel-btn {
+  background: #574565;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .parent-settings-page {
+    padding: 35px 5%;
+  }
+
+  .settings-card {
+    padding: 22px 18px;
+  }
+
+  .settings-buttons button {
+    flex: 1;
+  }
+}
